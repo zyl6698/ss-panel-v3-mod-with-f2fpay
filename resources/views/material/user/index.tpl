@@ -245,7 +245,17 @@
 											<dd>{$user->class_expire}</dd></p>
 
 											<p><dt>帐号过期时间</dt>
-											<dd>{$user->expire_in}</dd>
+											<dd>{$user->expire_in}</dd></p>
+
+											<p><dt>在线设备数量</dt>
+											<dd>{$user->online_ip_count()}</dd></p>
+                                          
+                                            <p><dt>设备数量限制</dt>
+											{if $user->node_connector!=0}
+											<dd>{$user->node_connector}个</dd>
+											{else}
+                                            <dd>不限制</dd>
+											{/if}</p>
 
 											<p><dt>速度限制</dt>
 											{if $user->node_speedlimit!=0}
