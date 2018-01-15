@@ -54,11 +54,11 @@ class Pay
                         <p class="card-heading">使用支付宝充值</p>
                         <label for="number">请选择充值金额：</label>
                         <select id="type" class="form-control" name="amount">
-                            <option value="10">10元</option>
-                            <option value="20">20元</option>
-                            <option value="50">50元</option>
-                            <option value="100">100元</option>
-                            <option value="200">200元</option>
+                            <option value="'.Config::get('amount')[0].'">'.Config::get('amount')[0].'元</option>
+                            <option value="'.Config::get('amount')[1].'">'.Config::get('amount')[1].'元</option>
+                            <option value="'.Config::get('amount')[2].'">'.Config::get('amount')[2].'元</option>
+                            <option value="'.Config::get('amount')[3].'">'.Config::get('amount')[3].'元</option>
+                            <option value="'.Config::get('amount')[4].'">'.Config::get('amount')[4].'元</option>
                         </select>
                         <p></p>
                         <a class="btn btn-flat waves-attach" id="urlChange" ><span class="icon">check</span>&nbsp;充值</a>
