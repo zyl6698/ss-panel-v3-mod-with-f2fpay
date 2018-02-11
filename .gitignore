@@ -1,2 +1,7 @@
 */.DS_Store
 .DS_Store
+storage/*
+config/.config.php
+.env
+vendor/
+composer.phar
