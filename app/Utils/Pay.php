@@ -662,13 +662,8 @@ class Pay
                 $trade->save();
                 
                 //更新用户账户
-                $user=User::find($trade->userid);
+		$user=User::find($trade->userid);
                 $user->money=$user->money+$_POST['total_amount'];
-                if ($user->class==0) {
-                    $user->class_expire=date("Y-m-d H:i:s", time());
-                    $user->class_expire=date("Y-m-d H:i:s", strtotime($user->class_expire)+86400);
-                    $user->class=1;
-                }
                 $user->save();
                 
                 //更新充值（捐赠）记录
