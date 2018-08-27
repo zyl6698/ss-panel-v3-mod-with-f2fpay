@@ -370,15 +370,5 @@ class AlipayTradeService {
 		$image = '<img src="http://chart.apis.google.com/chart?chs='.$size.'x'.$size.'&amp;cht=qr&chld='.$lev.'|'.$margin.'&amp;chl='.$content.'"  widht="'.$size.'" height="'.$size.'" />';
 		return $image;
 	}
-	
-	function create_erweima64($content, $size = '200', $lev = 'L', $margin= '0') {
-		$content = urlencode($content);
-		$imageurl = 'http://chart.apis.google.com/chart?chs='.$size.'x'.$size.'&cht=qr&chld='.$lev.'|'.$margin.'&chl='.$content;
-		$image_data = file_get_contents($imageurl);
-		$image_info = getimagesize($imageurl);
-		$base64_image = 'data:' . $image_info['mime'] . ';base64,' . chunk_split(base64_encode($image_data));
-		$qrcode = '<img src="'.$base64_image.'" >';
-		return $qrcode;
-	}
 
 }
