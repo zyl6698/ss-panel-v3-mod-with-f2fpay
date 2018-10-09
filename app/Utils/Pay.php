@@ -51,17 +51,18 @@ class Pay
     {
         
             return '
-                        <p class="card-heading">使用支付宝充值</p>
-                        <label for="number">请选择充值金额：</label>
-                        <select id="type" class="form-control" name="amount">
-                            <option value="10">10元</option>
-                            <option value="20">20元</option>
-                            <option value="50">50元</option>
-                            <option value="100">100元</option>
-                            <option value="200">200元</option>
-                        </select>
-                        <p></p>
-                        <a class="btn btn-flat waves-attach" id="urlChange" ><span class="icon">check</span>&nbsp;充值</a>
+                            <p class="card-heading"><font color="red">使用支付宝充值（推荐）</font></p>
+						<p>使用支付宝充值，支持自定义充值金额</p>
+						<div class="form-group form-group-label">
+							<label class="floating-label" for="number">请输入充值金额</label>
+							<input class="form-control" id="type" type="text" name="amount">
+						</div>
+						<p></p>
+						<div class="card-action-btn">
+							<p id="checkin-btn">
+								<button id="urlChange" class="btn btn-block btn-brand waves-attach waves-light waves-effect">使用支付宝充值</button>
+							</p>
+						</div>
 ';              
     }
     private static function pmw_html($user)
